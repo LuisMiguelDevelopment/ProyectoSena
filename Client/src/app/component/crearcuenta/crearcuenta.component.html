@@ -1,0 +1,29 @@
+
+<div class="crearcuenta">
+  <h1>CREAR CUENTA</h1>
+  <div class="formulario">
+    <form class="formulario" #frmRegister="ngForm" (ngSubmit)="onRegister(frmRegister)">
+      <div class="labels">
+        <div class="mb-3">
+          <label for="Usuario" class="label1"></label>
+          <input placeholder="Usuario" type="text" class="form-control" id="Usuario" name="Usuario" ngModel required>
+        </div>
+        <div class="mb-3">
+          <label for="Nombre" class="label1"></label>
+          <input placeholder="Nombres Y Apellidos" type="text" class="form-control" id="Nombre" name="Nombre" ngModel required >
+        </div>
+        <div class="mb-3">
+          <label for="Email" class=""></label>
+          <input placeholder="Email" type="email" class="form-control" id="Email" name="Email" ngModel required>
+        </div>
+        <div class="mb-3">
+          <label for="Contrasena" class=""></label>
+          <input placeholder="Contraseña" type="password" class="form-control" id="Contrasena" name="Contrasena" ngModel required>
+        </div>
+        <div class="boton">
+          <button type="submit">Crear cuenta</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

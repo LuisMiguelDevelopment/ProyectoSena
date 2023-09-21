@@ -1,0 +1,23 @@
+<div class="iniciosesion">
+    <h1>INICIAR SESION</h1>
+    <form class="formulario" #frmLogin="ngForm" (ngSubmit)="onLogin(frmLogin)">
+      <div class="labels">
+        <div class="email">
+          <div class="mb-3">
+              <input type="email" class="form-control" id="Email" name="Email" placeholder="Email" ngModel required>
+          </div>
+        </div>
+        <div class="contra">
+          <div class="mb-3">
+              <input type="password" class="form-control" plaid="Contrasena" placeholder="Contraseña" name="Contrasena" ngModel required>
+          </div>
+        </div>
+          <div class="boton-productos">
+              <button class="boton-iniciar" type="submit">Iniciar Sesión</button>
+          </div>
+          <div class="opciones">
+              <a href="crearcuenta" class="boton">Crear cuenta</a>
+          </div>
+      </div>
+  </form>
+</div>

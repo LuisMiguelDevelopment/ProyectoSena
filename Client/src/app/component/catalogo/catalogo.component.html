@@ -1,0 +1,41 @@
+<body>
+    <div class="catalogo-header">
+        <div class="titulo-header">
+            <h1>Nuestros productos</h1>
+        </div>
+        <div class="buscador">
+            <div class="input-group">
+                <div class="form-outline">
+                  <input placeholder="Buscar" type="search" id="form1" class="form-control" />
+                  
+                </div>
+                <button type="button" class="btn btn-primary">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+        </div>
+<div class="catalogo" >
+  <div class="mini-catalogo" >
+    <div class="card" style="width: 20rem;" *ngFor="let productos of listProductos">
+        <img src={{productos.Urlimagen}} class="card-img-top aguila" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{productos.Nombre}}</h5>
+          <p class="card-text">{{productos.Descripcion}}</p>
+          <p class="card-text">{{productos.Precio}}</p>
+          <a routerLink="catalogo" class="btn btn-warning" (click)="agregarAlCarrito(productos)">Agregar al carrito</a>
+        </div>
+      </div>     
+</div>
+</div>
+        
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Atras</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+        </ul>
+      </nav>
+</body>

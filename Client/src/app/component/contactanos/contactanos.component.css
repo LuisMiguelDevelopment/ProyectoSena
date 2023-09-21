@@ -1,0 +1,110 @@
+body {
+     font-family: 'Karla', sans-serif;
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 13;
+    
+     
+     
+}
+.contactanos{ 
+    width: 50%;
+    position: absolute;
+    top: 320px;
+}
+
+.contactanos h1{
+    font-weight: bold;
+    text-align: center;
+}
+
+.contactanos p{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.contactanos img{
+    margin-left: 400px;
+    margin-top: 50px;
+    height: 120px;
+
+}
+form{
+    padding: 5px 55px;
+    box-shadow: 0 0 20px rgb(0, 0,0);
+    border-radius: 20px;
+    text-align: center;
+    width: 650px;
+    background-color:#1A1A1A;  
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.title h2{
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    margin-top: 5px;
+    font-weight: bold;
+    border-bottom:3px groove #F69320;
+    margin: 20px;   
+}
+label{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+input, textarea {
+    padding: 17px  25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: rgb(255, 254, 254);
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    outline: none;   
+}
+input{
+    height: 50px;
+}
+input::placeholder, textarea::placeholder{
+    color: rgb(0, 0, 0);
+}
+.form-txt{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.form-txt a {
+    color: #f6f6f6;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn {
+    font-size: 16px;
+    color: #030303;
+    border: 0;
+   width: 150px;
+    background-color: #fffffb;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-weight: bolder;
+    margin-left: 35%;
+    
+}
+.btn:hover {
+    background-color: #F69320;
+}
+.form-txt a:hover {
+    color: #F69320;
+
+}

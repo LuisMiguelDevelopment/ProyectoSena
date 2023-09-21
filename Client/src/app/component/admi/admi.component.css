@@ -1,0 +1,65 @@
+.admin{
+    width: 50%;
+    height: 480px;
+    background-color: rgb(26, 26, 26);
+    box-shadow: 0 0 20px rgb(0, 0,0);
+    color: white;
+    border-radius: 20px;
+    left: 0;right: 0;margin: auto;
+    margin-top: 50px;margin-bottom: 50px;
+    padding-bottom: 15px;
+}
+h2{
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid rgb(246, 147, 32);
+    margin: 0px 70px;
+}
+.inputs{
+    padding: 15px 40px;
+}
+.boton-volver{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 25px;
+    border: 0px;
+    border-radius: 10px;
+    transition: .3s;
+    margin-left: 27.5px;
+}
+.boton-volver:hover{
+    background-color: rgb(11, 86, 225);
+    color: white;
+    font-weight: 800;
+    transition: .3s;
+    border: 0px solid;
+}
+.boton-añadir{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 23px;
+    border: 0px;
+    border-radius: 10px;
+    transition: .3s;
+    margin-right: 27.5px;
+}
+.boton-añadir:hover{
+    background-color: rgb(246, 147, 32);
+    color: white;
+    font-weight: 800;
+}
+@media only screen and (min-width: 800px) {
+    .admin{
+        width: 60%;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .admin{
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .admin{
+        width: 40%;
+    }
+}
