@@ -1,12 +1,50 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    font-size: 16px;
-}
+
 
 
 .navbar__logo--img{
     width: 25rem;
+    margin: 0 10px;
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    font-family: 'proxi';
+    position: fixed;
+    width: 100%;
+}
+
+.navbar__ul{
+   display: flex;
+   padding: 0 20px;
+   align-items: center;
+   height: 100%;
+}
+
+.navbar__li{
+    margin: 0 20px;
+}
+
+.navbar__a:hover{
+    color: var(--rojo);
+}
+
+@media screen and (min-width:1200px) {
+
+    
+    .navbar__li{
+        margin: 0 60px;
+    }
+
+    .navbar__a{
+        font-size: 1.2rem;
+    }
+    
+    .navbar__logo--img{
+        width: 30rem;
+    }
+
 }

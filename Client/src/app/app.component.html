@@ -1,9 +1,35 @@
-<div class="navbar">
-  <a class="navbar__logo" href=""><img class="navbar__logo navbar__logo--img" src="../assets/img/logo.png" alt=""></a>
+<div class="global">
+  <div class="navbar">
+    <a class="navbar__logo" href="">
+      <img class="navbar__logo navbar__logo--img" src="../assets/img/logo.png" alt="">
+    </a>
+    <div class="navbar__enlaces">
+        <ul class="navbar__ul">
+          <li class="navbar__li">
+              <a routerLink="/" class="navbar__a">INICIO</a>
+          </li>
+           <li class="navbar__li">
+              <a routerLink="catalogo" class="navbar__a">CATALOGO</a>
+          </li>
+           <li class="navbar__li">
+              <a href="" class="navbar__a">CONTACTANOS</a>
+          </li>
+           <li class="navbar__li">
+              <a routerLink="pedidos" class="navbar__a">PEDIDOS</a>
+          </li>
+          <li class="navbar__li">
+            <a href="" class="navbar__a"><i class="fa-regular fa-user" style="color: #ffffff;"></i></a>
+          </li>
+          <li class="navbar__li">
+            <a href="" class="navbar__a"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a>
+          </li>
+        </ul>
+    </div>
+  </div>
+  
+  
+  <router-outlet ></router-outlet>
 </div>
 
 
-<router-outlet ></router-outlet>
 
-
-  
