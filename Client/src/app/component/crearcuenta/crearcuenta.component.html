@@ -1,29 +1,28 @@
-
-<div class="crearcuenta">
-  <h1>CREAR CUENTA</h1>
-  <div class="formulario">
-    <form class="formulario" #frmRegister="ngForm" (ngSubmit)="onRegister(frmRegister)">
-      <div class="labels">
-        <div class="mb-3">
-          <label for="Usuario" class="label1"></label>
-          <input placeholder="Usuario" type="text" class="form-control" id="Usuario" name="Usuario" ngModel required>
-        </div>
-        <div class="mb-3">
-          <label for="Nombre" class="label1"></label>
-          <input placeholder="Nombres Y Apellidos" type="text" class="form-control" id="Nombre" name="Nombre" ngModel required >
-        </div>
-        <div class="mb-3">
-          <label for="Email" class=""></label>
-          <input placeholder="Email" type="email" class="form-control" id="Email" name="Email" ngModel required>
-        </div>
-        <div class="mb-3">
-          <label for="Contrasena" class=""></label>
-          <input placeholder="Contraseña" type="password" class="form-control" id="Contrasena" name="Contrasena" ngModel required>
-        </div>
-        <div class="boton">
-          <button type="submit">Crear cuenta</button>
-        </div>
-      </div>
-    </form>
+<body>
+  <div class="section__1">
+    <img src="../../../assets/img/002218-JOHNNIE_WALKER_BLUE_LABEL_BOTELLA_200ML.png" alt="">
   </div>
-</div>
+  <section>
+      <form  #frmRegister="ngForm" (ngSubmit)="onRegister(frmRegister)">
+            <h1 class="crear titulo">CREAR <span class="cuenta titulo">CUENTA</span></h1>
+            <h3>NOMBRE Y APELLIDO</h3>
+           
+            <input placeholder="" type="text" class="form-control" id="Usuario" name="Usuario" ngModel required>
+            <h3>CORREO ELECTRONICO</h3>
+           
+            <input placeholder="" type="email" class="form-control" id="email" name="email" ngModel required >
+            <h3>FECHA DE NACIMIENTO</h3>
+           
+            <input placeholder="" type="date" class="form-control" id="date" name="FECHA" ngModel required>
+            <h3>TELEFONO</h3>
+           
+            <input placeholder="" type="number" class="form-control" id="number" name="number" ngModel required>
+            <h3>CONTRASEÑA</h3>
+           
+            <input placeholder="" type="password" class="form-control" id="Contrasena" name="Contrasena" ngModel required>
+            <div class="crear-button">
+            <button class="enviar" type="submit">CREAR</button>
+          </div>
+       </form>
+  </section>
+</body>

@@ -1,80 +1,50 @@
 
 body{
     background-image: url(../../../assets/img/32022.jpg);
-    height: 100vh;
+ 
+    font-family: 'mont';
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
-
-.titulo-header{
-    display:inline-block;
-    margin-left:10%;
-}
-.titulo-header h1{
-    margin-top: 100px;
-    font-weight:bolder;
-
+.pedidos-header{
+    padding: 100px 0;
 }
 
- .comprar{
-    display: inline-block;
-    margin-left: 80%;
-  
-}
-.comprar h3{
-    font-weight: bolder;
-    
-}
-.comprar a{
-    width: 100%;
+.comprar , .titulo-header{
+    display: flex;
+    align-items: center;
+    padding:  0 50px;
 }
 
-.lista-productos{
-    margin-left: 8%;
-    margin-bottom: 200px;
-}
 .productos{
-    margin-top: 100px;
-    border-top: 1px solid rgb(102, 101, 101);
-    border-bottom: 1px solid rgb(102, 101,101);
-    width: 48%;
-   
+    display: flex;
 }
 
-.imagen{
-    display: inline-block;
+.productos__h2{
+    font-family: 'proxi';
+    color: var(--rojo);
 }
 
-.informacion{
-    display: inline-block;
-    width: 60%;
-    margin-top: 50px;
-}
-.informacion .precio{
-    display: inline-block;
-    margin-left: 20%;
-}
-
-.informacion p{
-    width: 50%;
-}
-
-.imagen img{
-    width: 250px;
-    height: 250px;
-    margin-top: -115px;
-    
-}
-
-.btn-soporte{
-    margin-left: 50%;
-     
-}
-
-.btn-recibo{
-    margin-left: 20px;
+.productos__img{
+    width: 16rem;
 }
 
 .btn{
-    border-radius: 30px;
+    background-color: var(--rojo);
+    border: none;
+    padding: 20px 30px;
+    margin: 10px;
+    font-family: 'proxi';
+}
+
+.precio{
+    font-size: 2rem;
+}
+
+span{
+    color: var(--rojo);
+    display: flex;
+    flex-direction: column;
 }

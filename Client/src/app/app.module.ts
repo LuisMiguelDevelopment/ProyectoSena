@@ -9,7 +9,6 @@ import { CarritoComponent } from './component/carrito/carrito.component';
 import { ContactanosComponent } from './component/contactanos/contactanos.component';
 import { IniciosesionComponent } from './component/iniciosesion/iniciosesion.component';
 import { CrearcuentaComponent } from './component/crearcuenta/crearcuenta.component';
-import { PerfilComponent } from './component/perfil/perfil.component';
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SesionGuardGuard } from './guards/sesion-guard.guard';
@@ -25,7 +24,6 @@ import { AdmiComponent } from './component/admi/admi.component';
     ContactanosComponent,
     IniciosesionComponent,
     CrearcuentaComponent,
-    PerfilComponent,
     AdmiComponent
     
   ],

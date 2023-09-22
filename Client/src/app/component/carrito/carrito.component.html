@@ -12,16 +12,16 @@
     <div class="lista-productos" *ngFor="let productosCart of listCart"> 
         <div class="productos">
             <div class="imagen">
-                <img src={{productosCart.Urlimagen}} alt="">
+                <img  class="productos__img"  src={{productosCart.Urlimagen}} alt="">
             </div>
             <div class="informacion">           
-                <h2>{{productosCart.Nombre}}</h2>
+                <h2 class="productos__h2">{{productosCart.Nombre}}</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In culpa quis fugit voluptate eos facere</p>
                 <p></p>
                 <button class="btn-recibo btn btn-warning"  (click)="mermarAlCarrito(productosCart)" >Mermar</button>
                 <button class="btn-recibo btn btn-warning" (click)="agregarAlCarrito(productosCart)" >Agregar</button>
                 <button class="btn-recibo btn btn-warning" (click)="eliminarDelCarrito(productosCart._id)" >Eliminar</button>
-                <h2 class="precio">{{productosCart.Precio}} , {{productosCart.Cantidad}}</h2>
+                <h2 class="precio">{{productosCart.Precio}} <span>Cantidad</span>{{productosCart.Cantidad}}</h2>
                 
             </div>  
         </div>  
