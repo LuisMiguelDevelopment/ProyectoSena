@@ -86,6 +86,10 @@
     font-size: 30px;
 }
 
+.menu{
+    display: none;
+}
+
 @media screen and (min-width:1200px) {
 
     
@@ -122,8 +126,50 @@
 
 
 @media screen and (max-width:1200px) {
+    .navbar__enlaces{
+        position:fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.452);
+        height: 100%;
+       
+    }
+    .navbar__ul{
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px 0;
+    }
 
-    
-    
 
+    .footer{
+        display: block;
+        height: 100%;
+    }
+
+    .seccion-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .menu{
+        font-size: 2rem;
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        
+    }
+
+    .navbar__enlaces.mobile-menu{
+        margin-right: -100%;
+        transition: all 0.5s ease ;
+    }
+
+}
+
+@media screen and (max-width:470px) {
+    .navbar__logo--img{
+        width: 350px;
+    }
 }

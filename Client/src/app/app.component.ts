@@ -19,9 +19,20 @@ export class AppComponent {
   constructor(private _productoCarrito : ProductoServicesService , private _loginService : LoginService) { }
 
   ngOnInit(): void {
-    this.ObtenerProductosCart()
+    this.ObtenerProductosCart();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const menus = document.querySelector(".menu") as HTMLElement;
+      const navLinks = document.querySelector(".navbar__enlaces") as HTMLElement;
+
+      menus.addEventListener('click', () => {
+        navLinks.classList.toggle('mobile-menu');
+      });
+    });
   }
 
+
+  
 
   ObtenerProductosCart(){
     this._productoCarrito.getProductosCart().subscribe(data=>{
