@@ -24,10 +24,19 @@ export class AppComponent {
     document.addEventListener('DOMContentLoaded', () => {
       const menus = document.querySelector(".menu") as HTMLElement;
       const navLinks = document.querySelector(".navbar__enlaces") as HTMLElement;
+      const salir = document.querySelector(".fa-x") as HTMLElement;
+      const abrir = document.querySelector(".abrir") as HTMLElement;
+      const perfil = document.querySelector(".perfil") as HTMLElement;
 
       menus.addEventListener('click', () => {
         navLinks.classList.toggle('mobile-menu');
       });
+      salir.addEventListener('click',()=>{
+        perfil.classList.toggle('mobile-menu')
+      })
+      abrir.addEventListener('click',()=>{
+        perfil.classList.toggle('mobile-menu')
+      })
     });
   }
 
