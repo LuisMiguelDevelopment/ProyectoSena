@@ -5,17 +5,18 @@
             CATA<span class="main__titulo main__titulo-span">LOGO</span>
         </h2>
         <div class="catalogo">
-            <div class="card card"> <!--Bloque (B)-->
-                <img src="../../../assets/img-catalogo/tequi1.png" alt="" class="card__img"><!--elemento (B)-->
+            <div class="card card" *ngFor="let productos of listProductos"> <!--Bloque (B)-->
+                <img src={{productos.Urlimagen}} alt="" class="card__img"><!--elemento (B)-->
                 <img src="../../../assets/img-catalogo/back.png" alt="" class="card__back">
-                <h3 class="card__title">TEQUILA DON julio 1942</h3>
+                <h3 class="card__title">{{productos.Nombre}}</h3>
                 <h4 class="card__cantidad">750<span class="card__cantidad--span">ml</span></h4>
-                <span class="card__precio">$ 1.100.000</span>
-                <a href="#" class="card__button">
+                <span class="card__precio">{{productos.Precio}}</span>
+                <a href="#" class="card__button" (click)="agregarAlCarrito(productos)">
                     <span class="card__button-text">AGREGAR</span> 
                     <a href="#" class="card__button-carrito"><img src="../../../assets/img-catalogo/cart.png" alt="" class="card__button-carrito"></a>
                 </a>
             </div>
+            
         </div>
     </main>
 </body>

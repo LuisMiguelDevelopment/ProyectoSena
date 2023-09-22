@@ -57,8 +57,13 @@
     margin-bottom: 30px;
     padding: 30px;
 }
+
+.bloque__img{
+    height: 50px; 
+    width: 60px;
+}
 .card__img{
-    width: 220px;
+    width: 150px;
     object-fit: cover;
     z-index: 50;
 }
@@ -103,6 +108,5 @@
 .card__button-carrito{
     width: 32px;
     position: relative;
-    top: -8%;
-    left: 23%;
+    left: 5%;
 }

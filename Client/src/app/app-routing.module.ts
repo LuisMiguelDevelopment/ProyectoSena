@@ -7,7 +7,6 @@ import { CarritoComponent } from './component/carrito/carrito.component';
 import { ContactanosComponent } from './component/contactanos/contactanos.component';
 import { IniciosesionComponent } from './component/iniciosesion/iniciosesion.component';
 import { CrearcuentaComponent } from './component/crearcuenta/crearcuenta.component';
-import { PerfilComponent } from './component/perfil/perfil.component';
 import { AdmiComponent } from './component/admi/admi.component';
 import { RolesService } from './services/roles.service';
 const routes: Routes = [
@@ -19,7 +18,6 @@ const routes: Routes = [
   {path:'contactanos',component:ContactanosComponent},
   {path:'iniciosesion' ,component:IniciosesionComponent},
   {path:'crearcuenta', component:CrearcuentaComponent},
-  {path:'perfil',component:PerfilComponent},
   {path:'admi' , component:AdmiComponent , canActivate:[RolesService]}
 ];
 
