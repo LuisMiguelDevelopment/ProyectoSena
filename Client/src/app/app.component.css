@@ -100,8 +100,10 @@
     gap: 30px 0;
     width: 30%;
     margin-right: -100%;
-    
+  
 }
+
+
 .perfil-section{
     display: flex;
     flex-direction: column;
@@ -161,7 +163,7 @@ hr{
     margin: 0 auto;
 }
 
-.fa-x{
+.fa-x,.salir-carrito{
     position: absolute;
     top: 20px;
     right: 20px;
@@ -174,6 +176,99 @@ hr{
    margin-right: 0%;
     transition: all 0.5s ease ;
 }
+.carrito.mobile-menu{
+   margin-right: 0%;
+    transition: all 0.5s ease ;
+}
+
+
+.carrito{
+    font-family: 'mont';
+}
+.carrito__h2{
+    text-align: center;
+    font-family: 'proxi';
+    margin-top: 30px;
+}
+.carrito-producto{
+    height: 200px;
+    
+}
+.carrito__body{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-top: 10px;
+}
+.carrito-items{
+    margin-top: 20px;
+}
+
+.carrito__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.button-aumt{
+    display: flex;
+    border: solid 1px rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    
+}
+.button-cantidad{
+    border: none;
+    background-color: transparent;   
+    width: 40px;
+    height: 30px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.carrito__pr-cant{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 15px;
+    
+}
+
+.carrito__precio{
+    display: flex;
+    align-items: center;
+    
+}
+
+.carrito__descripcion{
+    text-align: center;
+    width: 100%;
+}
+
+.carrito__p{
+    font-size: 1.2rem;
+   width: 100%;
+}
+
+.carrito-producto{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.carrito{
+    position:fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(56, 55, 55);
+    height: 100%;
+    overflow-y: auto;
+    margin-right: -100%;
+    transition: all 0.5s ease ;
+}
+
+
 
 @media screen and (min-width:1200px) {
 
@@ -267,8 +362,32 @@ hr{
     }
     .perfil{
         
-        width: 100%;
-        
-        
+        width: 100%; 
     }
+    
 }
+@media screen and (max-width:612px) {
+   
+    .carrito{
+        
+        width: 100%; 
+    }
+    
+}
+@media screen and (max-width:403px) {
+   .carrito__body{
+    display: block;
+    width: 100%;
+   } 
+   .carrito-img,.carrito__info{
+    display: flex;
+    justify-content: center;
+   }
+   .carrito__pr-cant{
+    justify-content: center;
+    gap: 10px;
+   
+    
+}
+}
+
