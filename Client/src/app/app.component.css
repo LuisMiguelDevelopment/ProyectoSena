@@ -100,7 +100,7 @@
     gap: 30px 0;
     width: 30%;
     margin-right: -100%;
-  
+    z-index: 100;
 }
 
 
@@ -173,7 +173,7 @@ hr{
 
 
 .perfil.mobile-menu{
-   margin-right: 0%;
+    margin-right: 0%;
     transition: all 0.5s ease ;
 }
 .carrito.mobile-menu{
@@ -184,6 +184,7 @@ hr{
 
 .carrito{
     font-family: 'mont';
+    z-index: 100;
 }
 .carrito__h2{
     text-align: center;
@@ -268,6 +269,11 @@ hr{
     transition: all 0.5s ease ;
 }
 
+.navbar__enlaces.mobile-menu{
+    margin-right: 0%;
+    transition: all 0.5s ease ;
+}
+
 
 
 @media screen and (min-width:1200px) {
@@ -314,6 +320,7 @@ hr{
         height: 100%;
         width: 70%;
         transition: all 0.5s ease ;
+        margin-right: -100%;
     }
     .navbar__ul{
         flex-direction: column;
@@ -342,10 +349,7 @@ hr{
         
     }
 
-    .navbar__enlaces.mobile-menu{
-        margin-right: -100%;
-        transition: all 0.5s ease ;
-    }
+    
 
     .perfil{
         
@@ -375,6 +379,9 @@ hr{
     
 }
 @media screen and (max-width:403px) {
+    .navbar__enlaces{
+        width: 100%;
+    }
    .carrito__body{
     display: block;
     width: 100%;

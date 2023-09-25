@@ -35,7 +35,6 @@
     text-align: center;
     font-size: 40px;
     color: var(--blanco);
-    z-index: 1;
     padding-top: 100px;
     font-family: 'nova';
 }

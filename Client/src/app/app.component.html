@@ -56,30 +56,29 @@
         <div class="carrito-header">
             <div class="carrito__h2">TU CARRITO</div>
         </div>
-            <div class="carrito-items">
+            <div class="carrito-items" *ngFor="let productosCart of listCart">
                 <hr>
                 <div class="carrito__body">
                         <div class="carrito-img">
-                            <img class="carrito-producto" src="../assets/img/002218-JOHNNIE_WALKER_BLUE_LABEL_BOTELLA_200ML.png" alt="">
+                            <img class="carrito-producto" src={{productosCart.Urlimagen}} alt="">
                         </div>
                         <div class="carrito__info">
                             <div class="carrito__descripcion">
-                              <p class="carrito__p">Johnnie Walker Blue Label</p>
+                              <p class="carrito__p">{{productosCart.Nombre}}</p>
                               <p class="carrito__p">200ml</p>
                             </div>
                             <div class="carrito__pr-cant">
                                 <div class="button-aumt">
-                                    <button class="button-cantidad">-</button>
-                                    <p class="carrito__cantidad">1</p>
-                                    <button class="button-cantidad">+</button>
+                                    <button class="button-cantidad"  (click)="mermarAlCarrito(productosCart)" >-</button>
+                                    <p class="carrito__cantidad">{{productosCart.Cantidad}}</p>
+                                    <button class="button-cantidad" (click)="agregarAlCarrito(productosCart)">+</button>
                                 </div>
                                 <div class="carrito__precio">
                                     <p class="precio-carrito">$1.000.000</p>
                                 </div>
                             </div>
                         </div>   
-                </div>
-                <hr>          
+                </div>         
             </div>   
         </div>
   </div>

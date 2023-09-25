@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component } from '@angular/core';
 import { ProductoServicesService } from './services/producto-services.service';
 import { Carrito } from 'src/models/cart';
 import { LoginService } from './services/login.service';
+import { CompraService } from './services/compra.service';
+
 
 @Component({
   selector: 'app-root',
@@ -11,12 +13,9 @@ import { LoginService } from './services/login.service';
 export class AppComponent {
   title = 'Front';
 
-
- 
   listCart: Carrito[] = [];
- 
 
-  constructor(private _productoCarrito : ProductoServicesService , private _loginService : LoginService) { }
+  constructor(private cdr: ChangeDetectorRef,private _productoCarrito : ProductoServicesService , private _loginService : LoginService, private _compraService : CompraService ) { }
 
   ngOnInit(): void {
     this.ObtenerProductosCart();
@@ -51,9 +50,8 @@ export class AppComponent {
     });
   }
 
-
+ 
   
-
   ObtenerProductosCart(){
     this._productoCarrito.getProductosCart().subscribe(data=>{
       console.log(data);
@@ -61,6 +59,57 @@ export class AppComponent {
     },error =>{
       console.log(error)
     })
+  }
+
+
+
+  agregarAlCarrito(productosCart: any){
+    const productoId = productosCart._id;
+    const body = { ...productosCart };
+    const query = 'add' 
+
+
+    this._productoCarrito.putProductoCart(productoId,{body,query}).subscribe(
+      response =>{
+        console.log(response)
+       
+      }
+    )
+
+  }
+
+
+  mermarAlCarrito(productosCart: any){
+    const productoId = productosCart._id;
+    const body = { ...productosCart };
+    const query = 'del' 
+
+
+    this._productoCarrito.putProductoCart(productoId,{body,query}).subscribe(
+      response =>{
+        console.log(response)
+       
+      }
+    )
+  }
+
+
+  eliminarDelCarrito(productoId: any){
+    this._productoCarrito.deleteProductoCart(productoId).subscribe(data=>{
+      console.log('Eliminado del carrito de compras')
+      this.ObtenerProductosCart();
+    })
+  }
+
+
+  comprarDelCarrito=(compra:any)=>{
+    this._compraService.addAlaCompra(compra).subscribe(
+      response =>{
+        console.log(response)
+      },error =>{
+        console.log(error)
+      }
+    )
   }
 
 
