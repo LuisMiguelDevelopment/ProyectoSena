@@ -5,9 +5,12 @@
             CATA<span class="main__titulo main__titulo-span">LOGO</span>
         </h2>
         <div class="catalogo">
-            <div class="card card" *ngFor="let productos of listProductos"> <!--Bloque (B)-->
-                <img src={{productos.Urlimagen}} alt="" class="card__img"><!--elemento (B)-->
-                <img src="../../../assets/img-catalogo/back.png" alt="" class="card__back">
+            <div class="card card" *ngFor="let productos of listProductos"> 
+                <div class="img">
+                    <img [src]="getImageUrl(productos)" alt="" class="card__img"><!--elemento (B)-->
+                    <img src="../../../assets/img-catalogo/back.png" alt="" class="card__backk">
+                </div><!--Bloque (B)-->
+               
                 <h3 class="card__title">{{productos.Nombre}}</h3>
                 <h4 class="card__cantidad">750<span class="card__cantidad--span">ml</span></h4>
                 <span class="card__precio">{{productos.Precio}}</span>

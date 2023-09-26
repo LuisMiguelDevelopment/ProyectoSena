@@ -60,7 +60,7 @@
                 <hr>
                 <div class="carrito__body">
                         <div class="carrito-img">
-                            <img class="carrito-producto" src={{productosCart.Urlimagen}} alt="">
+                            <img class="carrito-producto" [src]="'http://localhost:4000/uploads/' + productosCart.Urlimagen" alt="">
                         </div>
                         <div class="carrito__info">
                             <div class="carrito__descripcion">

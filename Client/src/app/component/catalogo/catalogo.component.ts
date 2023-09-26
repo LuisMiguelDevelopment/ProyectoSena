@@ -28,6 +28,10 @@ export class CatalogoComponent implements OnInit {
     })
   }
 
+  getImageUrl(product: Productos): string {
+    return 'http://localhost:4000/uploads/' + product.Urlimagen;
+  }
+
   agregarAlCarrito=(productos: any)=>{
     this._productosService.addProductoCart(productos).subscribe(
       response =>{

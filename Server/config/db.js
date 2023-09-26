@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 require('dotenv').config({path:'variables.env'})
 
 const conectarBD = async () =>{
@@ -13,5 +14,6 @@ const conectarBD = async () =>{
         process.exit(1);
     }
 }
+
 
 module.exports = conectarBD;

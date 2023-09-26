@@ -61,18 +61,24 @@
     height: 50px; 
     width: 60px;
 }
-.card__img{
-    width: 150px;
-    object-fit: cover;
-    z-index: 50;
+.img{
+    position: relative;
 }
-.card__back{
-    width: 250px;
-    object-fit: cover;
-    z-index: 10;
+.card__img{
+    object-fit: contain;
     position: absolute;
-    margin-top: 70px;
-    margin-left: 8px;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+}
+.card__backk{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-left: 5px;
+
+  
 }
 .card__title{
     margin: 15px 0px;
