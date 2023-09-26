@@ -1,8 +1,11 @@
 const Cart =  require("../models/Cart");
 const Productos = require("../models/Productos");
 
+
 exports.getProductoCart = async (req , res)=>{
-    const productosCart = await Cart.find();
+    const productosCart = await Cart.find({
+        user:req.user.id
+    }).populate('user')
 
     if(productosCart){
         res.json({ productosCart })
@@ -19,18 +22,20 @@ exports.addProductoCart = async (req, res) => {
   
     const noEstaVacio = Nombre !== "" && Urlimagen !== "" && Precio !== "";
   
-    const estaEnCarrito = await Cart.findOne({ Nombre });
+    
   
     if (!estaEnProductos) {
       res.status(400).json({
         msg: "Este producto no se encuentra en la base de datos",
       });
-    } else if (noEstaVacio && !estaEnCarrito) {
+    } else if (noEstaVacio ) {
       const newProductoCart = new Cart({
         Nombre,
         Urlimagen,
         Precio,
         Cantidad: 1,
+        user:req.user.id
+        
       });
   
       // Actualizar campo EnCart en el modelo de productos
@@ -44,6 +49,7 @@ exports.addProductoCart = async (req, res) => {
         producto: newProductoCart,
       });
     } else if (estaEnCarrito) {
+        
       res.status(400).json({
         msg: "El producto ya está en el carrito",
       });

@@ -29,6 +29,16 @@ const productoSchema = mongoose.Schema({
         type:Date,
         default : Date.now()
     },
+    Carrito: [{
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Usuario' // Reemplaza 'Usuario' con el nombre de tu modelo de usuario
+        },
+        Cantidad: {
+            type: Number,
+            default: 1
+        }
+    }]
     
 })
 
