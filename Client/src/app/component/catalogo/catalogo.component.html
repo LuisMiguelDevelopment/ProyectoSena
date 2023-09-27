@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
     <img class="imgFondo"/>
     <main class="main">
@@ -10,16 +11,13 @@
                     <img [src]="getImageUrl(productos)" alt="" class="card__img"><!--elemento (B)-->
                     <img src="../../../assets/img-catalogo/back.png" alt="" class="card__backk">
                 </div><!--Bloque (B)-->
-               
                 <h3 class="card__title">{{productos.Nombre}}</h3>
                 <h4 class="card__cantidad">750<span class="card__cantidad--span">ml</span></h4>
                 <span class="card__precio">{{productos.Precio}}</span>
-                <a href="#" class="card__button" (click)="agregarAlCarrito(productos)">
-                    <span class="card__button-text">AGREGAR</span> 
-                    <a href="#" class="card__button-carrito"><img src="../../../assets/img-catalogo/cart.png" alt="" class="card__button-carrito"></a>
-                </a>
+                <button href="#" class="card__button">AGREGAR
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
             </div>
-            
         </div>
     </main>
 </body>

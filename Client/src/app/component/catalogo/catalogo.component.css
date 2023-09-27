@@ -106,12 +106,25 @@
     display: flex;
     align-items: center;
     justify-content:center;
-}
-.card__button-text{
     font-family: 'nova';
+    cursor: pointer;
 }
 .card__button-carrito{
     width: 32px;
     position: relative;
     left: 5%;
+}
+.card__button:hover{
+    background-color: #ffffff;
+    color: var(--rojo);
+}
+.card__button:hover>.fa-solid{
+    color: var(--rojo);
+}
+.fa-solid{
+    margin-left: 20px;
+    font-size: 25px;
+}
+.card__button-cart{
+    margin-left: 20px;
 }
